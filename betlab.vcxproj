@@ -139,7 +139,42 @@
     </Manifest>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="betlab.cpp" />
+    <ClCompile Include="AdaptiveBettor.cpp" />
+    <ClCompile Include="AgressiveBettor.cpp" />
+    <ClCompile Include="AnalyticalBettor.cpp" />
+    <ClCompile Include="Bettor.cpp" />
+    <ClCompile Include="ConservativeBettor.cpp" />
+    <ClCompile Include="CustomStack.cpp" />
+    <ClCompile Include="Entity.cpp" />
+    <ClCompile Include="main.cpp" />
+    <ClCompile Include="ConsoleApp.cpp" />
+    <ClCompile Include="Market.cpp" />
+    <ClCompile Include="StatisticsReport.cpp" />
+    <ClCompile Include="World.cpp" />
+    <ClCompile Include="WorldSnapshot.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="AdaptiveBettor.h" />
+    <ClInclude Include="AgressiveBettor.h" />
+    <ClInclude Include="AnalyticalBettor.h" />
+    <ClInclude Include="BetRecord.h" />
+    <ClInclude Include="Bettor.h" />
+    <ClInclude Include="Capabilities.h" />
+    <ClInclude Include="ConservativeBettor.h" />
+    <ClInclude Include="ConsoleApp.h" />
+    <ClInclude Include="CustomQueue.h" />
+    <ClInclude Include="CustomStack.h" />
+    <ClInclude Include="Entity.h" />
+    <ClInclude Include="Event.h" />
+    <ClInclude Include="Market.h" />
+    <ClInclude Include="Opportunity.h" />
+    <ClInclude Include="StatisticsReport.h" />
+    <ClInclude Include="World.h" />
+    <ClInclude Include="WorldSnapshot.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include=".gitignore" />
+    <None Include="README.md" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

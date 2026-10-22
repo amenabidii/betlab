@@ -1,20 +1,27 @@
-// betlab.cpp : This file contains the 'main' function. Program execution begins and ends there.
-//
+/*
+BETLAB - CSCE 1101 SimWorld mini project
+Team members: Mohamed Amen Allah Abidi 900244027
 
-#include <iostream>
+World: an imaginary betting market where four strategies compete using virtual credits.
+Each turn creates one opportunity. Bettors make decisions automatically, their requests
+enter a custom FIFO queue, and all accepted bets share one outcome.
 
-int main()
-{
-    std::cout << "Hello World!\n";
+Inheritance in the project:
+Entity (common identity, virtual actions)
+  -> Bettor (balance + owned history)
+       -> ConservativeBettor / AggressiveBettor / AnalyticalBettor / AdaptiveBettor
+This separates what all bettors share from the different strategies.
+*/
+
+#include "ConsoleApp.h"
+#include <cstdlib>
+#include <ctime>
+int main() {
+    srand((unsigned int)time(nullptr));
+    ConsoleApp app;
+    app.run();
+    return 0;
 }
 
-// Run program: Ctrl + F5 or Debug > Start Without Debugging menu
-// Debug program: F5 or Debug > Start Debugging menu
 
-// Tips for Getting Started: 
-//   1. Use the Solution Explorer window to add/manage files
-//   2. Use the Team Explorer window to connect to source control
-//   3. Use the Output window to see build output and other messages
-//   4. Use the Error List window to view errors
-//   5. Go to Project > Add New Item to create new code files, or Project > Add Existing Item to add existing code files to the project
-//   6. In the future, to open this project again, go to File > Open > Project and select the .sln file
+

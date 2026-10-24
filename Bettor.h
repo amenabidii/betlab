@@ -2,10 +2,12 @@
 #define BETTOR_H
 #include "Entity.h"
 #include "BetRecord.h"
+
+// Bettor is the shared parent of the four strategies. It keeps the balance and the bet history in a dynamic array.
 class World;
 
 // Shared bettor details go here so the four strategies do not repeat them.
-// Each bettor owns a separate dynamic array. This is why copying needs care.
+// Each bettor owns a separate dynamic array 
 class Bettor : public Entity {
 private:
     double balance;
@@ -15,7 +17,7 @@ private:
     int historyCapacity;
     void copyHistory(const Bettor& other);
 protected:
-    bool placeBet(World& world, double stake);
+    bool placeBet(World& world, double stake, bool homeSelection);
 public:
     Bettor();
     Bettor(int id, string name, double balance);
@@ -29,7 +31,7 @@ public:
     BetRecord getRecord(int index) const;
     bool setBalance(double newBalance);
     bool deposit(double amount);
-    void settle(double stake, double odds, bool won, int turn);
+    void settle(double stake, double odds, bool won, int turn, string selectedTeam);
     void print() const override;
 };
 #endif

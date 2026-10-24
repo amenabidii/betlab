@@ -7,6 +7,8 @@
 #include "CustomQueue.h"
 using namespace std;
 
+// World manages the bettors, upcoming match, pending events, and the turn number.
+
 // World owns all entities in ONE collection, plus market data and pending events.
 // When it is copied for undo, we clone every entity into new memory.
 class World {
@@ -34,7 +36,7 @@ public:
     bool duplicate(int id);
     bool rename(int id, string name);
     bool changeBalance(int id, double amount);
-    bool requestBet(int id, double stake);
+    bool requestBet(int id, double stake, bool homeSelection);
     bool addUserEvent(Event event);
     void viewEvents() const;
     void list() const;

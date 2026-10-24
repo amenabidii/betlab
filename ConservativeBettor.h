@@ -1,7 +1,10 @@
 #ifndef CONSERVATIVEBETTOR_H
 #define CONSERVATIVEBETTOR_H
 #include "Bettor.h"
-// Uses small bets and skips opportunities with poor odds.
+
+// Declares the conservative bettor. This strategy prefers safer choices and smaller bets.
+// Uses small bets and skips opportunities with poor odds
+
 class ConservativeBettor : public Bettor {
 public:
     ConservativeBettor();

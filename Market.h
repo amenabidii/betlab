@@ -1,7 +1,8 @@
 #ifndef MARKET_H
 #define MARKET_H
 #include "Opportunity.h"
-// Market decides one shared outcome for all bettors. The actual chance is hidden from them.
+
+// The market stores the upcoming match and controls the simulated outcome.
 class Market {
 private:
     double condition;
@@ -11,6 +12,7 @@ public:
     const Opportunity& getOpportunity() const;
     void makeOpportunity(int turn);
     bool getOutcome() const;
+    void makeFinalScore(bool homeWon);
     bool changeCondition(double newCondition);
     double getCondition() const;
 };

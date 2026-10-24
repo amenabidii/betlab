@@ -2,6 +2,8 @@
 #define ADAPTIVEBETTOR_H
 #include "Bettor.h"
 #include "Capabilities.h"
+
+// Declares the adaptive bettor, including the percentage it currently risks.
 // Changes its stake percentage using its previous results.
 class AdaptiveBettor : public Bettor, public StrategyAdaptation {
 private:

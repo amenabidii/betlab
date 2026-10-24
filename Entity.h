@@ -3,6 +3,8 @@
 #include <string>
 #include <iostream>
 using namespace std;
+
+// The common parent class for every bettor. IDs and names are stored here, and virtual functions let the child classes behave differently.
 class World;
 
 // Every object in the world has an ID and can act when a turn runs.

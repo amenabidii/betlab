@@ -3,6 +3,8 @@
 #include <iostream>
 #include <iomanip>
 using namespace std;
+
+// Totals and performance numbers calculated from completed bets.
 void StatisticsReport::show(const World& world) {
     cout << "\n=== BETTING STATISTICS ===\n";
     bool any = false;
@@ -20,12 +22,12 @@ void StatisticsReport::show(const World& world) {
             if (record.getProfit() < worstLoss) worstLoss = record.getProfit();
         }
         cout << bettor->getName() << " (" << bettor->getType() << ") | Bets " << count
-             << " | Profit " << fixed << setprecision(2) << totalProfit;
+        << " | Profit " << fixed << setprecision(2) << totalProfit;
         if (count > 0 && totalStake > 0) {
             cout << " | Win rate " << 100.0 * wins / count << "%"
-                 << " | ROI " << 100.0 * totalProfit / totalStake << "%"
-                 << " | Avg stake " << totalStake / count
-                 << " | Biggest loss " << worstLoss;
+            << " | ROI " << 100.0 * totalProfit / totalStake << "%"
+            << " | Avg stake " << totalStake / count
+            << " | Biggest loss " << worstLoss;
         } else cout << " | Win rate N/A | ROI N/A";
         cout << "\n";
     }

@@ -6,6 +6,8 @@
 #include <string>
 using namespace std;
 
+// Console menu and input handling. The simulation itself stays inside World.
+
 // The console handles input and menu commands, while World handles simulation rules.
 class ConsoleApp {
 private:
